@@ -1,0 +1,13 @@
+To compile do:
+
+```
+cython cython_random.pyx
+```
+
+to generate the .c file
+
+then to compile:
+
+```
+gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -I/home/gil/miniconda3/include/python3.5m -I/home/gil/miniconda3/lib/python3.5/site-packages/numpy/core/include/ -o cython_random.so cython_random.c
+```
